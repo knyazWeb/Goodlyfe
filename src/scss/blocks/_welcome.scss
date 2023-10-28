@@ -1,0 +1,210 @@
+.welcome{
+    position: relative;
+    padding-top: 241px;
+    max-width: 1920px;
+    margin: 0 auto;
+
+    text-align: center;
+
+    &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -4px;
+        width: 100%;
+        height: 38px;
+
+        background: url('./../img/welcome/waveline.svg');
+        background-repeat: repeat;
+        background-size: cover;
+
+        @include small {
+            background: url('./../img/welcome/waveline-mobile.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+    &::before {
+        content: "";
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+
+        background: rgba(45, 40, 36, 0.20);
+    }
+
+    
+    
+}
+
+.welcome__content{
+    position: relative;
+    z-index: 1;
+}
+
+.welcome__title{
+    color: var(--white);
+    font-size: 70px;
+    line-height: 110%;
+    font-weight: 700;
+
+    margin-bottom: 30px;
+
+    @include mediaLaptop {
+        font-size: 65px;
+    }
+    @include mediaTablet {
+        font-size: 60px;
+    }
+
+    @include mediaPhoneWide {
+        font-size: 56px;
+    }
+
+    @include mediaPhone {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+}
+
+
+.welcome__btn{
+    color: var(--white);
+
+    font-family: var(--font-btn);
+    font-weight: 600;
+    font-style: normal;
+    line-height: 37px;
+    font-size: 16px;
+
+    padding: 14px 56px;
+    margin-bottom: 156px;
+
+    background-color: var(--accent);
+    border-radius: 38.5px;
+
+    transition: all .2s ease-in-out;
+    
+    @include isHover {
+        &:hover{
+            color: #F7F7FC;
+           
+            background-color: var(--dark-accent);
+        }
+        &:focus{
+            box-shadow: 0px 0px 10px #FFDAE7;
+        }
+    }
+
+    @include mediaPhoneWide {
+        font-size: 14px;
+        padding: 14px 40px;
+    }
+
+    @include mediaPhone {
+        padding: 10px 30px;
+        font-size: 13px;
+    }
+}
+
+// Swiper
+
+.swiper {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    div {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    
+}
+
+.swiper img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+        @include small {
+            object-fit:cover;
+        }
+}
+
+.swiper__slide-1{
+    animation-name: slide-1;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
+    animation-delay: 2s;
+}
+
+.swiper__slide-2{
+    animation-name: slide-2;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
+    animation-delay: 2s;
+}
+
+.swiper__slide-3{
+    animation-name: slide-3;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
+    animation-delay: 2s;
+}
+
+@keyframes slide-1 {
+    0%, 20%{
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    30%, 90%{
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    90%{
+        visibility: visible;
+        opacity: 1;
+    }
+    
+}
+
+@keyframes slide-2 {
+    0%, 20%, 65%{
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    30%, 50%{
+        opacity: 1;
+        visibility: visible;
+    }
+    
+}
+
+@keyframes slide-3 {
+    0%, 50%, 90%{
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+    60%, 80%{
+        visibility: visible;
+        opacity: 1;
+    }
+    
+}
