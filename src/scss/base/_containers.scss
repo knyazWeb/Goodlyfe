@@ -1,0 +1,27 @@
+.container {
+    padding: 0 var(--container-padding);
+    max-width: var(--container-width);
+    margin: 0 auto;
+
+    @include mediaPhone {
+        padding: 0 var(--container-padding-phone);
+    }
+    
+}
+
+.container-left {
+    @include mediaPhone {
+        padding-left: var(--container-padding-phone);
+        padding-right: 0;
+    }
+}
+
+.container-right {
+    padding-right: calc(
+        (100% - var(--container-width)) / 2 + var(--container-padding)
+    );
+
+    @media (max-width: $laptop-size) {
+        padding-right: var(--container-padding);
+    }
+}

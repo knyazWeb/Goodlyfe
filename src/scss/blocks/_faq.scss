@@ -1,0 +1,136 @@
+.faq {
+    padding-top: 95px;
+    padding-bottom: 122px;
+
+    @include mediaPhone {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+.faq__container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.faq__content {
+    display: flex;
+    gap: 270px;
+    align-items: center;
+
+    @include mediaTablet {
+        gap: 150px;
+        justify-content: space-around;
+    }
+
+    @include mediaPhoneWide {
+        gap: 80px;
+        flex-direction: column;
+    }
+
+    @include mediaPhone {
+        gap: 20px;
+    }
+}
+.faq__images {
+    flex-shrink: 0;
+    flex-basis: 440px;
+
+    position: relative;
+    
+    height: 505px;
+
+    @include mediaPhoneWide {
+        width: 440px;
+        flex-basis: auto;   
+    }
+
+    @include mediaPhone {
+        width: 262px;
+        height: 313px;
+    }
+
+    
+
+
+}
+
+.faq__image-1{
+    @include mediaPhone {
+        width: 176px;
+        height: 248px;
+    }
+}
+.faq__image-2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+     @include mediaPhone {
+        width: 146px;
+        height: 218px;
+    }
+}
+.faq__ingo{
+    flex-basis: 540px;
+    @include mediaTablet {
+        flex-basis: 450px;
+    }
+
+    @include mediaPhoneWide {
+        text-align: center;
+        width: 65vw;
+        flex-basis: auto;
+    }
+    @include mediaPhone {
+        text-align: left;
+    }
+
+    @include verySmall {
+        width: 100%;
+    }
+}
+
+.faq__title {
+    margin-bottom: 6px;
+}
+.faq__desc {
+    margin-bottom: 26px;
+}
+.faq__btn {
+    padding: 15px 65px;
+
+    color: var(--accent);
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 37px;
+
+    border-radius: 38.5px;
+    border: 2px solid var(--accent);
+
+    transition: all .2s ease-in-out;
+
+    @include isHover {
+        &:hover {
+            border-color: var(--dark-accent);
+            color: var(--dark-accent);
+        }
+
+        &:focus{
+            box-shadow: 0px 0px 10px #FFDAE7;
+        }
+    }
+
+    @include mediaPhoneWide {
+        padding: 13px 55px;
+        font-size: 14px;
+    }
+    @include mediaPhone {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    
+}

@@ -1,0 +1,115 @@
+.popup__bg {
+    display: none;  
+    position: fixed;
+    z-index: 5;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0,0,0,0.65);
+}
+
+.popup {
+    position: absolute; 
+    left: 50%; 
+    top: 50%; 
+    z-index: 5;
+
+    background: var(--accent);
+
+    transform: translate(-50%, -50%); 
+    border-radius: 15px;
+    padding: 60px 45px 30px 45px;
+   
+    width: 100%;
+    max-width: 600px;
+
+    @include small {
+        width: 90%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 6;
+    cursor: pointer;
+    transition: transform .2s ease-in-out;
+
+    @include isHover {
+        &:hover {
+            transform: scale(1.15);
+        }
+    } 
+}
+
+.popup__content  {
+    text-align: center;
+}
+
+
+
+.popup__content form input {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    color: var(--white);
+    font-size: 20px;
+
+    margin-bottom: 20px;
+    border: 1px solid var(--white);
+    border-radius: 20px;
+    padding: 15px 30px;
+
+    opacity: 0.8;
+    transition: all .2s ease-in-out;
+    &::placeholder {
+        color: #fff;
+        opacity: 0.7;
+    }
+
+    &:focus {
+        opacity: 1;
+        font-size: 24px;
+        transform: scale(1.05);
+    }
+
+    @include small {
+        font-size: 16px;
+
+        &:focus {
+        opacity: 1;
+        font-size: 18px;
+        transform: scale(1.03);
+    }
+    }
+}
+
+
+
+.popup__btn {
+    margin-top: 30px;
+    background-color: var(--white);
+    padding: 15px 50px; 
+    border-radius: 15px;
+    font-size: 24px;
+    color: var(--accent);
+
+
+    transition: all .2s ease-in-out;
+    @include isHover {
+        &:hover {
+            transform: scale(1.08);
+        }
+    }
+
+    @include small {
+        padding: 10px 35px;
+        font-size: 18px;
+    }
+    
+}
+

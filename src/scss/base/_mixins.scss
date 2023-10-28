@@ -1,0 +1,40 @@
+@mixin mediaLaptop {
+    @media screen and (max-width: $laptop-size) {
+        @content;
+    }
+}
+@mixin mediaTablet {
+    @media screen and (max-width: $tablet-size) {
+        @content;
+    }
+}
+
+@mixin mediaPhoneWide {
+    @media screen and (max-width: $phoneWide-size) {
+        @content;
+    }
+}
+
+@mixin mediaPhone {
+    @media screen and (max-width: $phone-size) {
+        @content;
+    }
+}
+
+@mixin small {
+     @media screen and (max-width: $small-size) {
+        @content;
+    }
+}
+
+@mixin verySmall {
+     @media screen and (max-width: $verySmall-size) {
+        @content;
+    }
+}
+
+@mixin isHover {
+    @media (hover: hover) {
+        @content;
+    }
+}

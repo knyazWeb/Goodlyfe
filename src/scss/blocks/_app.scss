@@ -1,0 +1,141 @@
+.app {
+    background-color: var(--accent);
+   
+}
+
+.app__content {
+    min-height: 491px;
+    display: flex;
+    justify-content: right;
+
+    @include mediaPhoneWide {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @include mediaPhone {
+        overflow: hidden;
+    }
+   
+}
+.app__info {
+    flex-basis: 490px;
+    margin-top: 112px;
+    padding-bottom: 75px;
+
+    @include mediaTablet {
+        flex-basis: auto;
+    }
+
+    @include mediaPhoneWide {
+        flex-basis: auto;
+        text-align: center;
+        width: 65vw;
+    }
+
+    @include mediaPhone {
+        text-align: left;
+    }
+
+    @include verySmall {
+        margin-top: 50px;
+        width: 90VW;
+    }
+}
+.app__title {
+    color: var(--white);
+    
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    margin-bottom: 5px;
+
+    @include mediaTablet {
+        font-size: 35px;
+    }
+}
+.app__desc {
+    color: var(--white);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 37px; 
+
+    margin-bottom: 15px;
+
+    @include mediaTablet {
+        font-size: 15px;
+    }
+}
+
+.app__download-title {
+    color: var(--white);
+    opacity: 0.6;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    margin-bottom: 9px;
+}
+
+.app__iphones {
+    position: relative;
+    min-width: 660px;
+
+    @include mediaTablet {
+        min-width: 600px;
+    }
+
+    @include mediaPhoneWide {
+        height: 491px;
+    }
+    
+    @include small {
+        min-width: auto;
+        width: 100%;
+    }
+
+    @include verySmall {
+        height: 410px;
+    }
+}
+.iphone-1 {
+    position: absolute;
+    left: 63px;
+    top: -30px;
+
+    @include small {
+        left: 0;
+    }
+
+    @include verySmall {
+        width: 180px;
+        height: 352px;
+    }
+    
+}
+.iphone-2 {
+    
+    position: absolute;
+    right: 110px;
+    bottom: 0;
+
+    margin-left: 32px;
+    @include mediaTablet {
+        right: 45px;
+    }
+    @include small {
+        right: -80px;
+    }
+
+    @include verySmall {
+        width: 180px;
+        height: 352px;
+        right: -60px;
+    }
+    
+}

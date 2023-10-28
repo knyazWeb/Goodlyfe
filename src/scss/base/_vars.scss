@@ -1,0 +1,31 @@
+:root {
+    // container
+    --container-width: 1440px;
+    --container-padding: 40px;
+    --container-padding-phone: 15px;
+
+    // fonts
+    --font-main: 'Poppins', sans-serif;
+    --font-accent: 'Manrope', sans-serif;
+    --font-btn: 'Open ≈Sans', sans-serif;
+
+    // colors
+    --page-bg: #fff;
+    --text-color: #424242;
+    --accent: #E43071;
+    --text-decor: #FFC1D8;
+    --white: #fff;
+    --dark-accent: #BE285E;
+
+  
+    
+
+}
+// Resolutions
+$laptop-size: 1445px;
+$tablet-size: 1160px;
+$phoneWide-size: 950px;
+$phone-size: 850px;
+$small-size: 620px;
+$verySmall-size: 460px;
+
