@@ -5,7 +5,8 @@
 .header__content {
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
+    gap: 10px;
     height: 101px;
     
 }
@@ -57,14 +58,14 @@
 .nav__item{
     color: var(--white);
     line-height: 17.52px;
-
+    padding: 2px 4px;
+    border-radius: 8px; 
     transition: all .2s ease-in-out;
 
     @include isHover {
         &:hover {
-            font-size: 1.2em;
-            font-weight: 600;
-            letter-spacing: 2px;
+            background-color: var(--white);
+            color: var(--accent); 
         }
     }
 }
